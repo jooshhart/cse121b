@@ -14,14 +14,14 @@ let profilePicture = 'images/self.png';
 const nameElement = document.getElementById('name');
 const foodElement = document.getElementById('food');
 const yearElement = document.querySelector('#year');
-const imageElement = document.getElementById('profilepicture');
+const imageElement = document.getElementById('profilePicture');
 
 /* Step 4 - Adding Content */
 
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = `${currentYear}`;
 imageElement.setAttribute('src', profilePicture);
-imageElement.setAttribute('alt', `Profile image of ${fullName}`);
+imageElement.alt = `Profile picture of ${fullName}`
 
 /* Step 5 - Array */
 
