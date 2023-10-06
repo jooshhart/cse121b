@@ -21,7 +21,7 @@ const imageElement = document.getElementById('profilePicture');
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = `${currentYear}`;
 imageElement.setAttribute('src', profilePicture);
-imageElement.alt = `Profile picture of ${fullName}`
+imageElement.alt = `Profile picture of ${fullName}`;
 
 /* Step 5 - Array */
 
