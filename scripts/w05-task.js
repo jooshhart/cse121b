@@ -33,7 +33,7 @@ const reset = () => {
 /* sortBy Function */
 const sortBy = (temples) => {
     reset();
-    let filter = document.getElementById('#sortBy');
+    let filter = document.getElementById(`sortBy`);
     switch (filter) {
         case "utah":
             displayTemples(temples.filter((temple) => temple.location.includes("Utah")));
