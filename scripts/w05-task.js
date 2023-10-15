@@ -28,7 +28,7 @@ const getTemples = async () => {
 };
 /* reset Function */
 const reset = () => {
-    templesElement.length= 0;
+    templesElement.innerHTML = "";
 };
 /* sortBy Function */
 const sortBy = (temples) => {
