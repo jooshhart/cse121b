@@ -1,27 +1,29 @@
 /* W05: Programming Tasks */
 
 /* Declare and initialize global variables */
-const templesElement = document.getElementById('#temples');
+const templesElement = document.querySelector("#temples");
 let templeList = [];
 /* async displayTemples Function */
 const displayTemples = (temples) => {
     temples.forEach (temple => {
-            const arti = document.createElement("article");
+            const article = document.createElement("article");
             const h3 = document.createElement("h3");
-            h3.textContent = temple.templeName;
-            const im = document.createElement("img");
-            im.setAttribute('src', temple.imageUrl);
-            im.setAttribute('alt', temple.location);
-            arti.appendChild(h3);
-            arti.appendChild(im);
-            templesElement.appendChild(arti);
+            h3.textContent = temple.templeName + "Temple";
+            const img = document.createElement("img");
+            img.src = temple.imageUrl;
+            img.alt = temple.location;
+            article.appendChild(h3);
+            article.appendChild(img);
+            templesElement.appendChild(article);
         });
 };
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    const data = await response.json();
-    templeList.appendChild(data);
+    if (response.ok) {
+        const data = await response.json();
+        templeList = data;
+    };
     displayTemples(templeList);
 };
 /* reset Function */
@@ -54,7 +56,7 @@ const sortBy = (temples) => {
         case "all":
             displayTemples(temples);
             break;
-    }
+    };
 };
 getTemples();
 
