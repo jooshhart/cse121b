@@ -28,7 +28,7 @@ const getTemples = async () => {
 };
 /* reset Function */
 const reset = () => {
-    templesElement = [];
+    templesElement.length = 0;
 };
 /* sortBy Function */
 const sortBy = (temples) => {
@@ -36,18 +36,11 @@ const sortBy = (temples) => {
     let filter = document.getElementById('#sortBy');
     switch (filter) {
         case "utah":
-            const utahTemples = temples.filter((temple) =>
-
-               temple.location.toLowerCase().includes('utah')
-            );
-            displayTemples(utahTemples);
+            displayTemples(temples.filter((temple) => temple.location.includes("Utah")));
             break;
 
         case "notutah":
-            const notUtah = temples.filter((temple) =>
-                !temple.location.toLowerCase().includes('utah')
-            );
-            displayTemples(notUtah);
+            displayTemples(temples.filter((temple) =>!temple.location.includes("Utah")));
             break;
 
         case "older":
@@ -61,4 +54,4 @@ const sortBy = (temples) => {
 getTemples();
 
 /* Event Listener */
-document.querySelector("#SortBy").addEventListener("change", () => {sortBy(templeList)});
+document.querySelector("#sortBy").addEventListener("change", () => {sortBy(templeList)});
