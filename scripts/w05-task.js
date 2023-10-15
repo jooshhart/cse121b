@@ -1,7 +1,7 @@
 /* W05: Programming Tasks */
 
 /* Declare and initialize global variables */
-const templesElement = document.getElementById('temples');
+const templesElement = document.getElementById('#temples');
 let templeList = [];
 /* async displayTemples Function */
 const displayTemples = (temples) => {
@@ -31,7 +31,7 @@ const reset = () => {
 /* sortBy Function */
 const sortBy = (temples) => {
     reset();
-    let filter = document.getElementById('sortBy');
+    let filter = document.getElementById('#sortBy');
     switch (filter) {
         case "utah":
             const utahTemples = temples.filter((temple) =>
