@@ -1,3 +1,6 @@
+const verdictElement = document.querySelector("#verdict");
+let verdictList = [];
+
 function myFunction ()
 {
     var rent = parseFloat(document.getElementById("rent").value);
@@ -41,10 +44,8 @@ function myFunction ()
     document.getElementById("e_tot").innerHTML = "Total: " + earn_tot
     document.getElementById("income").innerHTML = "Monthly Earnings: " + earn_tot + " - Monthly Expenses: " + exp_tot + " = Monthly Income: " + income
     
-    const verdictElement = document.querySelector("#verdict");
-    let verdictList = [];
     getVerdict();
-    income.addEventListener("change", () => {sortBy(verdictList)});
+    sortBy(verdictList);
 };
 
 
