@@ -313,3 +313,12 @@ footer {
     }
 
 }
+
+#verdict h3 {color: navy;
+    font-size: medium;
+    margin: 0 auto;}
+
+#verdict img {width: 250px;
+    height: auto;
+    box-shadow: 0 0 30px #777;
+    margin: .5rem;}
