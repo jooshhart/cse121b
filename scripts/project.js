@@ -1,6 +1,5 @@
 const verdictElement = document.querySelector("#verdict");
 let verdictList = [];
-
 function myFunction ()
 {
     var rent = parseFloat(document.getElementById("rent").value);
@@ -77,17 +76,16 @@ const reset = () => {
 
 const sortBy = (verdicts) => {
     reset();
-    let filter = income
-    switch (filter) {
-        case filter<0:
+    switch (income) {
+        case income<0:
             displayVerdict(verdicts.filter((verdict) => verdict.range.includes("<")));
             break;
 
-        case filter==0:
+        case income==0:
             displayVerdict(verdicts.filter((verdict) =>verdict.range.includes("0")));
             break;
 
-        case filter>0:
+        case income>0:
             displayVerdict(verdicts.filter((verdict) =>verdict.range.includes(">")));
             break;
     };
