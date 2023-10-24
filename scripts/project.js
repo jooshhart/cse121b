@@ -49,6 +49,19 @@ function myFunction ()
     sortBy(verdictList);
 };
 
+if (income < 0)
+{
+    bool = "bad"
+}
+else if (income == 0)
+{
+    bool = "well"
+}
+else if (income > 0)
+{
+    bool = "good"
+};
+
 
 const displayVerdict = (verdicts) => {
     verdicts.forEach (verdict => {
@@ -78,16 +91,16 @@ const reset = () => {
 
 const sortBy = (verdicts) => {
     reset();
-    switch (income) {
-        case income<0:
+    switch (bool) {
+        case "bad":
             displayVerdict(verdicts.filter((verdict) => verdict.range.includes("<")));
             break;
 
-        case income==0:
+        case "well":
             displayVerdict(verdicts.filter((verdict) =>verdict.range.includes("0")));
             break;
 
-        case income>0:
+        case "good":
             displayVerdict(verdicts.filter((verdict) =>verdict.range.includes(">")));
             break;
     };
