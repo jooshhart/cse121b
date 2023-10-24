@@ -38,6 +38,19 @@ function myFunction ()
     var earn_tot = earn_pre - earn_tax
     var income = earn_tot - exp_tot
 
+    if (income < 0)
+    {
+        bool = "bad"
+    }
+    else if (income == 0)
+    {
+        bool = "well"
+    }
+    else if (income > 0)
+    {
+        bool = "good"
+    };
+
     document.getElementById("pre").innerHTML = "Pre-Tax: " + exp_pre
     document.getElementById("tax").innerHTML = "Tax 20%: " + exp_tax
     document.getElementById("tot").innerHTML = "Total: " + exp_tot
@@ -50,18 +63,6 @@ function myFunction ()
     sortBy(verdictList);
 };
 
-if (income < 0)
-{
-    bool = "bad"
-}
-else if (income == 0)
-{
-    bool = "well"
-}
-else if (income > 0)
-{
-    bool = "good"
-};
 
 
 const displayVerdict = (verdicts) => {
