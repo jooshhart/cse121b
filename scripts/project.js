@@ -49,7 +49,6 @@ function myFunction ()
 };
 
 
-/* async displayTemples Function */
 const displayVerdict = (verdicts) => {
     verdicts.forEach (verdict => {
             const article = document.createElement("article");
@@ -63,7 +62,7 @@ const displayVerdict = (verdicts) => {
             verdictElement.appendChild(article);
         });
 };
-/* async getTemples Function using fetch()*/
+
 const getVerdict = async () => {
     const response = await fetch("https://run.mocky.io/v3/3e40a4d5-9f31-4867-8ac8-b9f1885a5b57");
     if (response.ok) {
@@ -71,11 +70,11 @@ const getVerdict = async () => {
         verdictList = data;
     };
 };
-/* reset Function */
+
 const reset = () => {
     verdictElement.innerHTML = "";
 };
-/* sortBy Function */
+
 const sortBy = (verdicts) => {
     reset();
     let filter = income
