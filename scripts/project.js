@@ -1,5 +1,6 @@
 const verdictElement = document.querySelector("#verdict");
 let verdictList = [];
+var income = 0;
 function myFunction ()
 {
     var rent = parseFloat(document.getElementById("rent").value);
