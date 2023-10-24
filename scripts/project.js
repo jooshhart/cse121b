@@ -1,6 +1,7 @@
 const verdictElement = document.querySelector("#verdict");
 let verdictList = [];
 var income = 0;
+let bool = ""
 
 function myFunction ()
 {
